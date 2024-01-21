@@ -23,7 +23,21 @@ namespace ConsumindoApi
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string strUrl = "https://api.hgbrasil.com/finance?array_limit=1&fields=only_results,USD&key=1a4b2896";
+            string moeda = "https://api.hgbrasil.com/finance?array_limit=1&fields=only_results,USD&key=1a4b2896";
+            if(cbMoeda.SelectedIndex == 0)
+            {
+                moeda = "https://api.hgbrasil.com/finance?array_limit=1&fields=only_results,USD&key=1a4b2896";
+                lblTitle.Text = "DOLAR";
+            }
+            else if(cbMoeda.SelectedIndex == 1)
+            {
+                moeda = "https://api.hgbrasil.com/finance?array_limit=1&fields=only_results,EUR&key=1a4b2896";
+                lblTitle.Text = "EURO";
+            }
+            
+            
+
+            string strUrl = moeda;
 
             using (HttpClient client = new HttpClient())
             {

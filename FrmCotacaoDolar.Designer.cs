@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,19 +36,21 @@
             this.lblBuy = new System.Windows.Forms.Label();
             this.lblSell = new System.Windows.Forms.Label();
             this.lblVar = new System.Windows.Forms.Label();
+            this.cbMoeda = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(-1, -2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(597, 85);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DOLAR";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitle.Location = new System.Drawing.Point(-1, -2);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(597, 85);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "DOLAR";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -63,9 +65,9 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(174, 347);
+            this.btnSearch.Location = new System.Drawing.Point(174, 343);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(144, 42);
+            this.btnSearch.Size = new System.Drawing.Size(151, 46);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "PESQUISAR";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -127,11 +129,34 @@
             this.lblVar.Text = "0,0";
             this.lblVar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbMoeda
+            // 
+            this.cbMoeda.FormattingEnabled = true;
+            this.cbMoeda.Items.AddRange(new object[] {
+            "DOLAR",
+            "EURO"});
+            this.cbMoeda.Location = new System.Drawing.Point(335, 368);
+            this.cbMoeda.Name = "cbMoeda";
+            this.cbMoeda.Size = new System.Drawing.Size(212, 21);
+            this.cbMoeda.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(331, 343);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 22);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Selecione a moeda:";
+            // 
             // FrmCotacaoDolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 442);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbMoeda);
             this.Controls.Add(this.lblVar);
             this.Controls.Add(this.lblSell);
             this.Controls.Add(this.lblBuy);
@@ -139,7 +164,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -153,7 +178,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label3;
@@ -161,6 +186,8 @@
         private System.Windows.Forms.Label lblBuy;
         private System.Windows.Forms.Label lblSell;
         private System.Windows.Forms.Label lblVar;
+        private System.Windows.Forms.ComboBox cbMoeda;
+        private System.Windows.Forms.Label label1;
     }
 }
 
